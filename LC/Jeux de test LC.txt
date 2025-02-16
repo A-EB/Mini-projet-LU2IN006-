@@ -1,0 +1,31 @@
+Biblio* b1 = charger_n_entrees(argv[1] , atoi(argv[2]));
+Biblio* b2 = charger_n_entrees(argv[3] , atoi(argv[4]));
+
+printf("\n---------------------------------\n");
+affiche_biblio(b1);
+printf("\n---------------------------------\n");
+affiche_livre(recherche_num(b1,15));  // 15 VMXXRDRYXL ndq
+affiche_livre(recherche_num(b1,30));  // 30 GEIQVD aijvwcyau 
+affiche_livre(recherche_num(b1,99));  // 99 TYCBMJAWWMNINEPFD plu
+printf("\n---------------------------------\n");
+affiche_livre(recherche_titre(b1,"UKWAGM"));  // 16 UKWAGM ejuukwcibxub 
+affiche_livre(recherche_titre(b1,"TPNIMUWFJQSJXVKQ"));  // 40 TPNIMUWFJQSJXVKQ orxxvrwctdsn
+affiche_livre(recherche_titre(b1,"DNFNBYJ"));  // 80 DNFNBYJ pdjxyu 
+printf("\n---------------------------------\n");
+affiche_biblio(recherche_auteur(b1,"jxloghi"));  // 17 MENMEYATDRMYDI jxloghi 
+affiche_biblio(recherche_auteur(b1,"afqzzx"));  // 50 UEBNVFGVJWDVJ afqzzx
+affiche_biblio(recherche_auteur(b1,"zzwpwmfbfjkn"));  // 70 WRAA zzwpwmfbfjkn 
+printf("\n---------------------------------\n");
+affiche_biblio(b1);
+supprimerLivre(b1,30,"GEIQVD","aijvwcyau");
+affiche_biblio(b1);
+printf("\n---------------------------------\n");
+affiche_biblio(b1);
+liberer_biblio(b1);
+affiche_biblio(b1);
+printf("\n---------------------------------\n");
+Biblio* b3 = fusion_biblio(b1,b2);
+affiche_biblio(b3);
+printf("\n---------------------------------\n");
+affiche_livre(recherche_ouvrage(b1));  // Num : ??? | Titre : KEZXDU | Auteur : xdrwv
+printf("\n---------------------------------\n");
